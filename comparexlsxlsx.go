@@ -24,9 +24,16 @@ func CompareXlsXlsx(xlsfilepathname string, xlsxfilepathname string) string {
 		if xlsSheet == nil {
 			return fmt.Sprintf("Cant get xls sheet")
 		}
-		for row, xlsxRow := range xlsxSheet.Rows {
+		for i := 0; i < xlsxSheet.MaxRow; i++ {
+			row := i
+			xlsxRow, err := xlsxSheet.Row(i)
 			xlsRow := xlsSheet.Row(row)
-			for cell, xlsxCell := range xlsxRow.Cells {
+			if err != nil {
+				return ""
+			}
+			for j := 0; j < xlsxSheet.MaxCol; j++ {
+				cell := j
+				xlsxCell := xlsxRow.GetCell(j)
 				xlsxText := xlsxCell.String()
 				xlsText := xlsRow.Col(cell)
 				if xlsText != xlsxText {
