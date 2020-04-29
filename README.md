@@ -1,8 +1,10 @@
 # xls
 
-[![GoDoc](https://godoc.org/github.com/extrame/xls?status.svg)](https://godoc.org/github.com/extrame/xls)
+forked from extrame/xls
 
-Pure Golang xls library writen by [Rongshu Tech (chinese)](http://www.rongshu.tech), based on libxls. 
+fix problems at comparexlsxlsx.go (last tealeg/xlsx does not have property Rows and Cols)
+
+Pure Golang xls library writen by Rongshu Tech (chinese), based on libxls. 
 
 Thanks for contributions from Tamás Gulácsi @tgulacsi, @flyin9.
 
