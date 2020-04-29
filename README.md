@@ -2,7 +2,7 @@
 
 forked from extrame/xls
 
-fix problems at comparexlsxlsx.go (last tealeg/xlsx does not have property Rows and Cols)
+fix problems at comparexlsxlsx.go by 0x5f81 (last tealeg/xlsx does not have property Rows and Cols)
 
 Pure Golang xls library writen by Rongshu Tech (chinese), based on libxls. 
 
